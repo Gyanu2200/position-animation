@@ -1,0 +1,95 @@
+.body {
+
+}
+
+.container {
+    background: blue;
+    width: 90vw;
+    height: 90vh;
+    margin: auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+}
+
+.parent {
+    background: black;
+    color: white;
+    width: 60vw;
+    height: 60vh;
+
+    border-radius: 10%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* position: relative; */
+
+    animation: spin 2s reverse infinite;
+}
+
+h2 {
+    animation: spin 1s infinite;
+}
+
+.ball {
+    /* background: red; */
+    background: radial-gradient(yellow,red);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+
+    position: absolute;
+    top: 50px;
+    left: 50px;
+
+
+    /* animation */
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+
+    /* animation: name duration iteration-itration-count direction; */
+    animation: circle 3s infinite;
+}
+
+@keyframes circle {
+    0% {
+        top: 50px;
+        right: 50px;
+    }
+
+    25% {
+        top: 50px;
+        left: 80vw;
+        /* background: blue; */
+    }
+
+    50% {
+        top: 80vh;
+        left: 80vw;
+        /* background: black; */
+    }
+
+    75% {
+        top: 80vh;
+        left: 50px;
+    }
+
+
+    100% {
+        top: 50px;
+        right: 50px;
+    }
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
